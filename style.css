@@ -1,1 +1,193 @@
+/* Configurações Gerais e Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+:root {
+    --primary-color: #2c5e3b;      /* Verde Escuro */
+    --secondary-color: #8d6e63;    /* Tom de Terra/Madeira */
+    --accent-color: #4caf50;       /* Verde Claro */
+    --bg-light: #f7f9f6;           /* Fundo Cinza Claro Esverdeado */
+    --text-dark: #2d3748;          /* Texto Escuro */
+    --white: #ffffff;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Cabeçalho (Header) */
+header {
+    background: linear-gradient(rgba(44, 94, 59, 0.85), rgba(44, 94, 59, 0.95)), 
+                url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=1200') no-repeat center center/cover;
+    color: var(--white);
+    text-align: center;
+    padding: 80px 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+header p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Container Principal */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Seção de Introdução */
+.intro {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
+    border-left: 5px solid var(--accent-color);
+}
+
+.intro h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* Títulos de Seção e Textos de Apoio */
+.section-title {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 5px;
+}
+
+.section-description {
+    margin-bottom: 25px;
+    color: #4a5568;
+}
+
+/* Grid de Cards */
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+}
+
+/* Caixa de Destaque (Desafios) */
+.highlight-box {
+    background-color: #efebe9;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 40px;
+    border-left: 5px solid var(--secondary-color);
+}
+
+.highlight-box h3 {
+    color: #5d4037;
+    margin-bottom: 15px;
+}
+
+.highlight-item {
+    margin-bottom: 15px;
+}
+
+.highlight-item:last-child {
+    margin-bottom: 0;
+}
+
+.highlight-item strong {
+    color: #4e342e;
+    display: block;
+    margin-bottom: 2px;
+}
+
+/* Tabela Responsiva */
+.table-responsive {
+    overflow-x: auto;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--white);
+    text-align: left;
+    min-width: 600px; /* Garante boa visualização em telas pequenas */
+}
+
+th, td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+/* Rodapé (Footer) */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+    font-size: 0.9rem;
+}
+
+/* Ajustes para Dispositivos Móveis */
+@media (max-width: 768px) {
+    header {
+        padding: 50px 20px;
+    }
+    
+    header h1 { 
+        font-size: 1.8rem; 
+    }
+    
+    .section-title { 
+        font-size: 1.4rem; 
+    }
+}
